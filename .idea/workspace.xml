@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c249cb7f-61ea-42eb-a70e-decb862cd1d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models/Contacts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Contacts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/Contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/Contacts.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,7 +61,7 @@
       <workItem from="1581349486200" duration="855000" />
       <workItem from="1581350658592" duration="7565000" />
       <workItem from="1581361566053" duration="18000" />
-      <workItem from="1581361958183" duration="1499000" />
+      <workItem from="1581361958183" duration="4475000" />
     </task>
     <servers />
   </component>

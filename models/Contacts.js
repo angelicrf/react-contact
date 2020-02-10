@@ -14,9 +14,12 @@ const ContactSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'users'
     },
-    password:{
+    phone:{
+        type: String
+    },
+    type:{
         type: String,
-        required: true
+        default: 'personal'
     },
     date:{
         type: Date,
