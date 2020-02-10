@@ -6,7 +6,7 @@ const connectDB = require('./config/db');
 const app = express();
 const port = process.env.PORT;
 
-
+app.use(express.json({ extended: false}));
 app.get('/', (req, res) => res.json({msg: 'Succeed...'}));
 
 app.use('/api/users', users);
