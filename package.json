@@ -5,7 +5,10 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -19,7 +22,9 @@
   },
   "homepage": "https://github.com/angelicrf/react-contact#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "bcryptjs": "^2.4.3",
+    "bootstrap-icons": "^1.0.0-alpha2",
     "config": "^3.2.5",
     "express": "^4.17.1",
     "express-validator": "^6.4.0",

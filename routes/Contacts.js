@@ -67,8 +67,6 @@ router.put('/:id', auth, async  (req, res) => {
         res.status(500).send('Server Error....');
     }
 
-
-
 });
 router.delete('/:id', auth , async (req, res) => {
 
@@ -88,7 +86,5 @@ router.delete('/:id', auth , async (req, res) => {
         res.status(500).send('Server Error....');
     }
 });
-
-
 
 module.exports = router;

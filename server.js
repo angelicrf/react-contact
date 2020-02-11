@@ -4,7 +4,7 @@ const auth = require('./routes/Auth');
 const contacts = require('./routes/Contacts');
 const connectDB = require('./config/db');
 const app = express();
-const port = process.env.PORT;
+const port = process.env.SERVER_PORT;
 
 app.use(express.json({ extended: false}));
 app.get('/', (req, res) => res.json({msg: 'Succeed...'}));
