@@ -2,23 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c249cb7f-61ea-42eb-a70e-decb862cd1d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/contacts/ContactItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/contacts/Contacts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/layout/Navbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/pages/About.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/context/contact/ContactContext.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/context/contact/ContactReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/context/contact/ContactState.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/context/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/contacts/ContactForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/Contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/Contacts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/context/contact/ContactReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/context/contact/ContactReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/context/contact/ContactState.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/context/contact/ContactState.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +73,9 @@
       <workItem from="1581350658592" duration="7565000" />
       <workItem from="1581361566053" duration="18000" />
       <workItem from="1581361958183" duration="4968000" />
-      <workItem from="1581436124641" duration="11383000" />
+      <workItem from="1581436124641" duration="11982000" />
+      <workItem from="1582213175359" duration="1712000" />
+      <workItem from="1582221006854" duration="1707000" />
     </task>
     <servers />
   </component>
