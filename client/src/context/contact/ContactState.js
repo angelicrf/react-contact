@@ -32,7 +32,8 @@ const ContactState = props => {
                 phone: '654-098-9854',
                 type: 'professional'
             },
-        ]
+        ],
+        current: null
 
     };
 
@@ -41,10 +42,26 @@ const ContactState = props => {
         contact.id = uuid.v4();
         dispatch({ type: ADD_CONTACT, payload: contact })
     };
+    const deleteContact = id => {
+        dispatch({type: DELETE_CONTACT, payload: id})
+    };
+    const setCurrent = contact => {
+        dispatch({type: SET_CURRENT, payload: contact})
+    };
+    const clearCurrent = () => {
+        dispatch({type: CLEAR_CURRENT})
+    };
+    const updateContact = contact => {
+        dispatch({type: UPDATE_CONTACT, payload: contact})
+    };
         return (
        <ContactContext.Provider value={{
            contacts: state.contacts,
-           addContact
+           current: state.current,
+           deleteContact,
+           setCurrent,
+           clearCurrent,
+           updateContact
 
        }}>
            {props.children}
