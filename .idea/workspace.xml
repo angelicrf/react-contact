@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c249cb7f-61ea-42eb-a70e-decb862cd1d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/contacts/ContactFilter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/context/auth/AuthReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/context/auth/AuthState.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/context/auth/authContext.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/contacts/Contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/contacts/Contacts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/context/contact/ContactReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/context/contact/ContactReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/context/contact/ContactState.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/context/contact/ContactState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/context/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/context/types.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,6 +79,8 @@
       <workItem from="1582221006854" duration="2306000" />
       <workItem from="1582321736539" duration="4703000" />
       <workItem from="1582408718067" duration="3915000" />
+      <workItem from="1582415669791" duration="1008000" />
+      <workItem from="1582482787067" duration="1324000" />
     </task>
     <servers />
   </component>
