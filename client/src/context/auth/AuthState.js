@@ -14,7 +14,6 @@ const AuthState = props => {
         isAuthenticated: null,
         loading: true,
         error: null
-
     };
 
     const [state, dispatch] = useReducer(AuthReducer, initialState);
@@ -22,7 +21,7 @@ const AuthState = props => {
     return (
         <AuthContext.Provider value={{
           token: state.token,
-            isAuthenticated: satee.isAuthenticated,
+            isAuthenticated: state.isAuthenticated,
             loading: state.user,
             error: state.error
         }}>
