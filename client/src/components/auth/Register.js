@@ -1,9 +1,12 @@
 import React, {useContext, useState} from 'react';
 import AlertContext from '../../context/alert/alertContext';
-
+import AuthContext from "../../context/auth/authContext";
 const Register = () =>{
     const alertContext = useContext(AlertContext);
+    const authContext = useContext(AuthContext);
+
     const { setAlert } = alertContext;
+    const { register } = authContext;
 
     const [user,setUser] = useState({
         name: '',
@@ -33,7 +36,12 @@ const Register = () =>{
             }
         }else {
              console.log('Register submit');
-             setAlert('Registered', 'success')
+             setAlert('Registered', 'success');
+            register({
+                name,
+                email,
+                password
+            })
         }
     };
         return (
