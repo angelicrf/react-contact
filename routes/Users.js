@@ -53,5 +53,14 @@ router.post('/', [
     }
 
 });
+router.get('/',  async (req, res) => {
+    try {
+        const user = await User.findById(req.user.id).select('-password');
+        res.json(user);
 
+    } catch (e) {
+        console.error(e.message);
+        res.status(500).send('Server error....')
+    }
+});
 module.exports = router;

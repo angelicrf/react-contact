@@ -3,10 +3,11 @@ import axios from 'axios';
 import uuid from 'uuid';
 import AuthContext from './authContext';
 import AuthReducer from './AuthReducer';
+import setAuthToken from '../../util/setAuthToken';
 
 import {REGISTER_SUCCESS , REGISTER_FAIL,
     USER_LOADED, AUTH_ERROR, LOGIN_SUCCESS,
-    LOGOUT, CLEAR_ERRORS} from '../types';
+    LOGIN_FAIL,CLEAR_ERRORS} from '../types';
 
 const AuthState = props => {
 
@@ -18,18 +19,59 @@ const AuthState = props => {
     };
 
     const [state, dispatch] = useReducer(AuthReducer, initialState);
-    const loadUser = () => {
-        console.log('LoadingUser');
+    const loadUser = async () => {
+        if(localStorage.token) {
+            setAuthToken(localStorage.token);
+        }
+        try{
+            const res = await axios.get('http://localhost:30026/api/users');
+            dispatch({
+                type:USER_LOADED,
+                payload: res.data
+            })
+        }catch (e) {
+          dispatch({
+              type: AUTH_ERROR
+          })
+        }
     };
-    const login = () => {
-        console.log('login');
+    const login = async formData => {
+        const config = {
+            headers: {
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Max-Age': '86400',
+                'Content-Type': 'application/json',
+                "Clear-Site-Data": "*",
+                "Access-Control-Allow-Origin": "*",
+                'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS'
+            }
+        };
+        try {
+
+            const res = await axios.post('http://localhost:30026/api/auth', formData, config);
+
+            dispatch({
+                type: LOGIN_SUCCESS,
+                payload: res.data
+            });
+            loadUser();
+
+        } catch (e) {
+            dispatch({
+                type: LOGIN_FAIL,
+                payload: e.response.data.msg
+            })
+        }
     };
-    const logout = () => {
+
+        const logout = () => {
         console.log('logout');
     };
 
     const clearErrors = () => {
-        console.log('clearErrors');
+       dispatch({
+           type: CLEAR_ERRORS
+       })
     };
 
      const register = async formData => {
@@ -46,17 +88,12 @@ const AuthState = props => {
         try{
 
             const res = await axios.post('http://localhost:30026/api/users', formData, config);
-    /*           .then(resp => {
-                console.log(resp)
-                }).catch(e => {
-                console.log('the error is ', e.message);
-            });*/
 
-             //console.log('res.data is:', res.data);
             dispatch({
                 type: REGISTER_SUCCESS,
                 payload: res.data
-            })
+            });
+            loadUser();
 
         }catch (e) {
            dispatch({
@@ -64,6 +101,7 @@ const AuthState = props => {
                payload: e.response.data.msg
            })
         }
+
     };
     return (
         <AuthContext.Provider value={{
