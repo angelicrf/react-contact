@@ -35,15 +35,24 @@ const AuthState = props => {
      const register = async formData => {
        const config = {
             headers: {
+                'Access-Control-Allow-Headers': 'Content-Type',
+                 'Access-Control-Max-Age': '86400',
                 'Content-Type': 'application/json',
-                "Clear-Site-Data": "*"
+                "Clear-Site-Data": "*",
+                "Access-Control-Allow-Origin": "*",
+                'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS'
             }
         };
         try{
 
-            const res = await axios.post('/api/users', formData, config);
+            const res = await axios.post('http://localhost:30026/api/users', formData, config);
+    /*           .then(resp => {
+                console.log(resp)
+                }).catch(e => {
+                console.log('the error is ', e.message);
+            });*/
 
-            console.log('res.data is:', res.data);
+             //console.log('res.data is:', res.data);
             dispatch({
                 type: REGISTER_SUCCESS,
                 payload: res.data

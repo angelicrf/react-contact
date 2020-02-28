@@ -3,6 +3,10 @@
   "name": "Create React App Sample",
   "icons": [
   ],
+  "permissions": [
+    "http://google.com/*",
+    "https://firefox.com/*"
+  ],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
