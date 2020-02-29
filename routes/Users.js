@@ -53,7 +53,7 @@ router.post('/', [
     }
 
 });
-router.get('/',  async (req, res) => {
+/*router.get('/',  async (req, res) => {
     try {
         const user = await User.findById(req.user.id).select('-password');
         res.json(user);
@@ -62,5 +62,5 @@ router.get('/',  async (req, res) => {
         console.error(e.message);
         res.status(500).send('Server error....')
     }
-});
+});*/
 module.exports = router;
