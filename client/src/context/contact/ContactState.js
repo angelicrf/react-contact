@@ -4,7 +4,7 @@ import ContactContext from './ContactContext';
 import ContactReducer from './ContactReducer';
 
 import {
-    ADD_CONTACT, DELETE_CONTACT, CONTACT_ERROR, SET_CURRENT, CLEAR_CURRENT,
+    ADD_CONTACT, DELETE_CONTACT, CONTACT_ERROR, SET_CURRENT, CLEAR_CURRENT, CLEAR_CONTACT,
     UPDATE_CONTACT, FILTER_CONTACT, CLEAR_FILTER, SET_ALERT, GET_CONTACT,
     REMOVE_ALERT, LOGIN_SUCCESS
 } from '../types';
@@ -16,7 +16,6 @@ const ContactState = props => {
         current: null,
         filtered: null,
         error: null
-
     };
 
     const [state, dispatch] = useReducer(ContactReducer, initialState);
@@ -37,7 +36,7 @@ const ContactState = props => {
         }
     };
 
-    const addContact = async (contact) => {
+    const addContact = async contact => {
         const config = {
             headers: {
                 'Access-Control-Allow-Headers': 'Content-Type',
@@ -59,25 +58,68 @@ const ContactState = props => {
                 payload: e.response.data.msg
             })
         }
-
     };
-    const deleteContact = id => {
-        dispatch({type: DELETE_CONTACT, payload: id})
+    const deleteContact = async _id => {
+        try{
+            await axios.delete(`http://localhost:30026/api/contacts/${_id}`);
+            dispatch({
+                type: DELETE_CONTACT,
+                payload: _id
+            })
+        }catch (e) {
+            dispatch({
+                type: CONTACT_ERROR,
+                payload: e.response.msg
+            })
+        }
+    };
+    const clearContact = () => {
+        dispatch({
+            type: CLEAR_CONTACT
+        })
     };
     const setCurrent = contact => {
         dispatch({type: SET_CURRENT, payload: contact})
     };
     const clearCurrent = () => {
-        dispatch({type: CLEAR_CURRENT})
+        dispatch({
+            type: CLEAR_CURRENT
+        })
     };
-    const updateContact = contact => {
-        dispatch({type: UPDATE_CONTACT, payload: contact})
+    const updateContact = async contact => {
+        const config = {
+            headers: {
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Max-Age': '86400',
+                'Content-Type': 'application/json',
+                "Clear-Site-Data": "*",
+                "Access-Control-Allow-Origin": "*",
+                'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS'
+            }
+        };
+        try{
+            const res = await axios.put(`http://localhost:30026/api/contacts/${contact._id}`, contact, config);
+            dispatch({
+                type: UPDATE_CONTACT,
+                payload: res.data
+            })
+        }catch (e) {
+            dispatch({
+                type: CONTACT_ERROR,
+                payload: e.response.data.msg
+            })
+        }
     };
     const filterContacts = text => {
-        dispatch({type: FILTER_CONTACT, payload: text})
+        dispatch({
+            type: FILTER_CONTACT,
+            payload: text
+        })
     };
     const clearFilter = () => {
-        dispatch({type: CLEAR_FILTER})
+        dispatch({
+            type: CLEAR_FILTER
+        })
     };
         return (
        <ContactContext.Provider value={{
@@ -88,6 +130,7 @@ const ContactState = props => {
            getContact,
            addContact,
            filterContacts,
+           clearContact,
            clearFilter,
            deleteContact,
            setCurrent,
@@ -98,7 +141,6 @@ const ContactState = props => {
            {props.children}
        </ContactContext.Provider>
         );
-
 };
 
 export default ContactState;
