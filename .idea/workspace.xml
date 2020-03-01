@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c249cb7f-61ea-42eb-a70e-decb862cd1d9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/components/layout/Spinner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/layout/spinner.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/routing/PrivateRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/contacts/ContactItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/contacts/ContactItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/contacts/Contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/contacts/Contacts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/layout/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/layout/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/context/auth/AuthReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/context/auth/AuthReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/context/auth/AuthState.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/context/auth/AuthState.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/Users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/context/contact/ContactReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/context/contact/ContactReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/context/contact/ContactState.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/context/contact/ContactState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/context/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/context/types.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +35,7 @@
   <component name="ProjectId" id="1XRyErw6XWKpClWU4E4bf3AVr3x" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/components/layout" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -36,13 +46,14 @@
     <property name="prettierjs.PrettierConfiguration.Package" value="$USER_HOME$/npm/lib/node_modules/prettier" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/client/src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/src" />
       <recent name="$PROJECT_DIR$/client/src/components/pages" />
       <recent name="$PROJECT_DIR$/client/src/components/layout" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/components/layout" />
+      <recent name="$PROJECT_DIR$/client/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -83,6 +94,7 @@
       <workItem from="1582564139156" duration="3677000" />
       <workItem from="1582834766961" duration="6215000" />
       <workItem from="1582905091822" duration="21542000" />
+      <workItem from="1583010804793" duration="10276000" />
     </task>
     <servers />
   </component>

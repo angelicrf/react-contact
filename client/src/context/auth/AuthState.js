@@ -7,7 +7,7 @@ import setAuthToken from '../../util/setAuthToken';
 
 import {REGISTER_SUCCESS , REGISTER_FAIL,
     USER_LOADED, AUTH_ERROR, LOGIN_SUCCESS,
-    LOGIN_FAIL,CLEAR_ERRORS} from '../types';
+    LOGIN_FAIL,CLEAR_ERRORS, LOGOUT} from '../types';
 
 const AuthState = props => {
 
@@ -65,7 +65,9 @@ const AuthState = props => {
     };
 
         const logout = () => {
-        console.log('logout');
+        dispatch({
+            type: LOGOUT
+        })
     };
 
     const clearErrors = () => {

@@ -1,47 +1,65 @@
 import React, {useReducer} from 'react';
-import uuid from 'uuid';
+import axios from 'axios';
 import ContactContext from './ContactContext';
 import ContactReducer from './ContactReducer';
 
-import {ADD_CONTACT, DELETE_CONTACT, SET_CURRENT, CLEAR_CURRENT,
-        UPDATE_CONTACT, FILTER_CONTACT, CLEAR_FILTER, SET_ALERT,
-        REMOVE_ALERT} from '../types';
+import {
+    ADD_CONTACT, DELETE_CONTACT, CONTACT_ERROR, SET_CURRENT, CLEAR_CURRENT,
+    UPDATE_CONTACT, FILTER_CONTACT, CLEAR_FILTER, SET_ALERT, GET_CONTACT,
+    REMOVE_ALERT, LOGIN_SUCCESS
+} from '../types';
 
 const ContactState = props => {
 
     const initialState = {
-        contacts: [
-            {
-                id:1,
-                name: 'John Williams',
-                email: 'johnW@gmail.com',
-                phone: '123-321-4433',
-                type: 'personal'
-            },
-            {
-                id:2,
-                name: 'George McKenzi',
-                email: 'mcjhgW@gmail.com',
-                phone: '163-387-4763',
-                type: 'personal'
-            },
-            {
-                id:3,
-                name: 'Andy Kalham',
-                email: 'andKol@gmail.com',
-                phone: '654-098-9854',
-                type: 'professional'
-            },
-        ],
+        contacts: null,
         current: null,
-        filtered: null
+        filtered: null,
+        error: null
 
     };
 
     const [state, dispatch] = useReducer(ContactReducer, initialState);
-    const addContact = contact => {
-        contact.id = uuid.v4();
-        dispatch({ type: ADD_CONTACT, payload: contact })
+
+    const getContact = async () => {
+
+        try{
+            const res = await axios.get('http://localhost:30026/api/contacts');
+            dispatch({
+                type: GET_CONTACT,
+                payload: res.data
+            });
+        }catch (e) {
+            dispatch({
+                type: CONTACT_ERROR,
+                payload: e.response.msg
+            })
+        }
+    };
+
+    const addContact = async (contact) => {
+        const config = {
+            headers: {
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Max-Age': '86400',
+                'Content-Type': 'application/json',
+                "Clear-Site-Data": "*",
+                "Access-Control-Allow-Origin": "*",
+                'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS'
+            }
+        };
+        try{
+            const res = await axios.post('http://localhost:30026/api/contacts', contact, config);
+            dispatch({
+                type: ADD_CONTACT,
+                payload: res.data });
+        }catch (e) {
+            dispatch({
+                type: CONTACT_ERROR,
+                payload: e.response.data.msg
+            })
+        }
+
     };
     const deleteContact = id => {
         dispatch({type: DELETE_CONTACT, payload: id})
@@ -66,6 +84,9 @@ const ContactState = props => {
            contacts: state.contacts,
            current: state.current,
            filtered: state.filtered,
+           error: state.error,
+           getContact,
+           addContact,
            filterContacts,
            clearFilter,
            deleteContact,
