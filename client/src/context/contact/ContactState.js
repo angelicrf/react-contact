@@ -23,7 +23,7 @@ const ContactState = props => {
     const getContact = async () => {
 
         try{
-            const res = await axios.get('https://lit-caverns-06970.herokuapp.com/api/contacts');
+            const res = await axios.get('/api/contacts');
             dispatch({
                 type: GET_CONTACT,
                 payload: res.data
@@ -49,7 +49,7 @@ const ContactState = props => {
             }
         };
         try{
-            const res = await axios.post('https://lit-caverns-06970.herokuapp.com/api/contacts', contact, config);
+            const res = await axios.post('/api/contacts', contact, config);
             dispatch({
                 type: ADD_CONTACT,
                 payload: res.data
@@ -63,7 +63,7 @@ const ContactState = props => {
     };
     const deleteContact = async _id => {
         try{
-            await axios.delete(`https://lit-caverns-06970.herokuapp.com/api/contacts/${_id}`);
+            await axios.delete(`/api/contacts/${_id}`);
             dispatch({
                 type: DELETE_CONTACT,
                 payload: _id
@@ -103,7 +103,7 @@ const ContactState = props => {
             }
         };
         try{
-            const res = await axios.put(`https://lit-caverns-06970.herokuapp.com/api/contacts/${contact._id}`, contact, config);
+            const res = await axios.put(`/api/contacts/${contact._id}`, contact, config);
             dispatch({
                 type: UPDATE_CONTACT,
                 payload: res.data
