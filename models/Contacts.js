@@ -13,7 +13,7 @@ const ContactSchema = mongoose.Schema({
     },
     user:{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'users'
+        ref: 'contacts'
     },
     phone:{
         type: String

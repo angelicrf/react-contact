@@ -10,7 +10,10 @@ const Contact = require('../models/Contacts');
 
 router.get('/', auth, async (req, res) => {
     try{
-       const contacts = await Contact.find({user: req.user.id}).select({date: -1});
+       const contacts = await Contact.find({
+           user: req.user.id
+           })
+           .select({name: '', type: '', email: '', phone: ''});
        res.json(contacts);
     } catch (e) {
         console.error(e.message);

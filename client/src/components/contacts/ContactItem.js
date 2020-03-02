@@ -15,18 +15,18 @@ const ContactItem = ({ contact })=> {
    return (
             <div className="card bg-light">
                 <h3 className="text-primary text-left">
-                    {name} {''} <span style={{float: 'right'}} className={'badge ' + (type === 'professional' ? 'badge-success' : 'badge-primary')}>
-                 {/*   {type.charAt(0).toUpperCase() + type.slice(1)}*/}
+                    {name} {''}<span style={{float: 'right'}} className={'badge ' + (type === 'professional' ? 'badge-success' : 'badge-primary')}>
+                    {type.charAt(0).toUpperCase() + type.slice(1)}
+
                 </span>
                 </h3>
                 <ul className="list">
-                    {email && (<li>
+                    <li>
                         <i className="fa fa-envelope"> {email}</i>
-                    </li>)}
-
-                    {phone && (<li>
+                    </li>
+                    <li>
                         <i className="fa fa-phone"> {phone}</i>
-                    </li>)}
+                    </li>
                 </ul>
                 <button className="btn btn-dark btn-sm" onClick={()=> setCurrent(contact)}>
                     Edit
@@ -34,7 +34,6 @@ const ContactItem = ({ contact })=> {
                 <button className="btn btn-danger btn-sm" onClick={onDelete}>
                     Delete
                 </button>
-
             </div>
         );
 };

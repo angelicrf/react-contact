@@ -28,6 +28,7 @@ const ContactState = props => {
                 type: GET_CONTACT,
                 payload: res.data
             });
+            console.log(res.data);
         }catch (e) {
             dispatch({
                 type: CONTACT_ERROR,
@@ -51,7 +52,8 @@ const ContactState = props => {
             const res = await axios.post('http://localhost:30026/api/contacts', contact, config);
             dispatch({
                 type: ADD_CONTACT,
-                payload: res.data });
+                payload: res.data
+            });
         }catch (e) {
             dispatch({
                 type: CONTACT_ERROR,
@@ -79,7 +81,10 @@ const ContactState = props => {
         })
     };
     const setCurrent = contact => {
-        dispatch({type: SET_CURRENT, payload: contact})
+        dispatch({
+            type: SET_CURRENT,
+            payload: contact
+        })
     };
     const clearCurrent = () => {
         dispatch({
