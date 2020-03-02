@@ -24,5 +24,5 @@ if(process.env.NODE_ENV === 'production'){
     app.get('*', (req,res) => res.sendFile(path.resolve(__dirname),'client', 'build', 'index.html' ));
 }
 
-app.listen(port, () => console.log(`The server is listening on port: ${port}...`));
-connectDB;
+app.listen(port || 30026, () => console.log(`The server is listening on port: ${port}...`));
+
