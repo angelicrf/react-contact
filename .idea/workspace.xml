@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c249cb7f-61ea-42eb-a70e-decb862cd1d9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/production.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/contacts/ContactFilter.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/contacts/ContactFilter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/contacts/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/contacts/ContactForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/contacts/ContactItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/contacts/ContactItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/contacts/Contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/contacts/Contacts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/context/contact/ContactState.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/context/contact/ContactState.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Contacts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/Contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/Contacts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/context/auth/AuthState.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/context/auth/AuthState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/util/setAuthToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/util/setAuthToken.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/default.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +31,9 @@
   </component>
   <component name="ProjectId" id="1XRyErw6XWKpClWU4E4bf3AVr3x" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.10.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/components/layout" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -92,7 +96,8 @@
       <workItem from="1583010804793" duration="11333000" />
       <workItem from="1583024376031" duration="7523000" />
       <workItem from="1583100871965" duration="2914000" />
-      <workItem from="1583105639530" duration="2536000" />
+      <workItem from="1583105639530" duration="3421000" />
+      <workItem from="1583165260730" duration="2892000" />
     </task>
     <servers />
   </component>

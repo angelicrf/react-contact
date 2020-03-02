@@ -33,7 +33,6 @@ const Contacts =() => {
                 ) : <Spinner/>}
 
             </Fragment>
-
         );
 };
 

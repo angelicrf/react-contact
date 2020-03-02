@@ -47,9 +47,7 @@ const AuthState = props => {
             }
         };
         try {
-
             const res = await axios.post('http://localhost:30026/api/auth', formData, config);
-
             dispatch({
                 type: LOGIN_SUCCESS,
                 payload: res.data
@@ -63,7 +61,6 @@ const AuthState = props => {
             })
         }
     };
-
         const logout = () => {
         dispatch({
             type: LOGOUT
