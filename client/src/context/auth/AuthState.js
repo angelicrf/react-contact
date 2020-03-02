@@ -24,7 +24,7 @@ const AuthState = props => {
             setAuthToken(localStorage.token);
         }
         try{
-            const res = await axios.get('http://localhost:30026/api/auth');
+            const res = await axios.get(`http://localhost:${process.env.PORT}/api/auth`);
             dispatch({
                 type:USER_LOADED,
                 payload: res.data
@@ -47,7 +47,7 @@ const AuthState = props => {
             }
         };
         try {
-            const res = await axios.post('http://localhost:30026/api/auth', formData, config);
+            const res = await axios.post(`http://localhost:${process.env.PORT}/api/auth`, formData, config);
             dispatch({
                 type: LOGIN_SUCCESS,
                 payload: res.data
@@ -86,7 +86,7 @@ const AuthState = props => {
         };
         try{
 
-            const res = await axios.post('http://localhost:30026/api/users', formData, config);
+            const res = await axios.post(`http://localhost:${process.env.PORT}/api/users`, formData, config);
 
             dispatch({
                 type: REGISTER_SUCCESS,
