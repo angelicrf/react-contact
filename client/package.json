@@ -2,6 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://0.0.0.0:30026",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
@@ -37,7 +38,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:30026",
   "devDependencies": {
     "prop-types": "^15.7.2"
   }

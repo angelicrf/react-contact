@@ -23,6 +23,8 @@ if(process.env.NODE_ENV === 'production'){
     app.use(express.static('client/build'));
     app.get('*', (req,res) => res.sendFile(path.resolve(__dirname),'client', 'build', 'index.html' ));
 }
+process.env.NODE_HOST = '0.0.0.0';
+const host = process.env.NODE_HOST;
 
-app.listen(port || 30026, () => console.log(`The server is listening on port: ${port}...`));
+app.listen(port || 30026,host, () => console.log(`The server is listening on port: ${port}...`));
 
